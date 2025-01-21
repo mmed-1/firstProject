@@ -6,7 +6,8 @@
     <title>Document</title>
     <style>
         body{
-            background-color: red;
+            background-color: black;
+            color: white;
         }
     </style>
 </head>
@@ -15,6 +16,10 @@
         for($i=0; $i<5; $i++)
         echo "<h1>Hello, World!</h1>"; 
     ?>
+
+    <form action="" method="post">
+        <input type="text">
+    </form>
 
 </body>
 </html>

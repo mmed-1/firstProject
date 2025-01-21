@@ -25,6 +25,7 @@ void Employee::EmployeeInfo() {
 }
 
 int main() {
+    cout << "Testing" << endl;
     Employee emp("mmed1");
     emp.EmployeeInfo();
     Employee emp2("Randy Orton");

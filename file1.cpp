@@ -3,12 +3,20 @@
 using namespace std;
 
 class Employee {
-private:
+protected:
     static int var;
     int id;
     string name;
 public:
     Employee(string);
+    void EmployeeInfo();
+};
+
+class Develloper : public Employee{
+private:
+    string favLanguage;
+public:
+    Develloper(string, string);
     void EmployeeInfo();
 };
 
@@ -24,9 +32,21 @@ void Employee::EmployeeInfo() {
     cout << "My name: " << name << endl;
 }
 
+Develloper::Develloper(string x, string y) : Employee(x) {
+    favLanguage = y;
+}
+
+void Develloper::EmployeeInfo() {
+    Employee::EmployeeInfo();
+    cout << "My favourite language is: " << favLanguage << endl;
+}
+
 int main() {
     cout << "Testing" << endl;
     Employee emp("mmed1");
     emp.EmployeeInfo();
-    Employee emp2("Randy Orton");
+    // Employee emp2("Randy Orton");
+
+    Develloper dev("mmed1", "C++");
+    dev.EmployeeInfo();
 }
